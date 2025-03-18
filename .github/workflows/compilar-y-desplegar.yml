@@ -27,5 +27,8 @@ jobs:
 
       - name: Compilar
         run: dotnet build --no-restore
+
+      - name: Realizar pruebas
+        run: dotnet test --no-build
       
           
