@@ -30,7 +30,7 @@ jobs:
       - name: Instalar .NET
         uses: actions/setup-dotnet@v4.3.1
         with:
-          dotnet-version: ${{ env.VERSION_DOTNET }}
+          dotnet-version: ${{env.VERSION_DOTNET}}
           
       - name: Obteniendo las dependencias
         run: dotnet restore
@@ -75,9 +75,9 @@ jobs:
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v3.0.0
       with:
-       app-name: ${{ env.AZURE_APP_SERVICE_NOMBRE }}
+       app-name: ${{env.AZURE_APP_SERVICE_NOMBRE}}
        publish-profile: ${{secrets.AZURE_PERFIL_PUBLICO}}
-       package: ${{ env.AZURE_APP_SERVICE_UBICACION_PAQUETE }}
+       package: ${{env.AZURE_APP_SERVICE_UBICACION_PAQUETE}}
        
     
        
